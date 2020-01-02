@@ -26,7 +26,7 @@ class ImageManager:
 
     def save_score(self, score):
         print(f"saving score of {score}")
-        self.images[self.pointer].score(score)
+        self.images[self.pointer].score = score
 
     def hold(self):
         self.held_images.append(self.images[self.pointer])

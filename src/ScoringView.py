@@ -6,7 +6,7 @@ folder = sg.PopupGetFolder(message='Find the folder of images', title='Browse Fo
 image_manager = ImageManager(folder)
 
 scoring_layout = [
-    [sg.Image(filename=image_manager.get_image_path(), key='-IMAGE-')],
+    [sg.Image(filename=image_manager.get_image_path(), key='-IMAGE-', size=(160, 120))],
     [sg.Text(text=image_manager.get_image_title(), key='-TITLE-')],
     [sg.Slider(range=(1, 10), default_value=5, orientation='horizontal', key='-SCORE-')],
     [sg.Button('Hold & Next'), sg.Button('Next')]
